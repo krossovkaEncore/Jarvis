@@ -1,9 +1,9 @@
-tokenGroq = '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'
-tJarvisTg='8140673237:AAHXruu4E3maAFJarhQeGASVX498n-P9tCc'
+tokenGroq = ''
+tJarvisTg=''
 tJarvisDs=''
-tSupportTg='7913022394:AAGtm-G-8y8rIf_mQcc4CsWBGBSHA0dJOAI'
+tSupportTg=''
 
-whiteList = [776247660]
+whiteList = []
 
 SAFE_COMMANDS = ["shutdown", "dir", "echo", "tasklist", "taskkill", "start"]
 
