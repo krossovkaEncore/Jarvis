@@ -1,4 +1,8 @@
-token='8140673237:AAHXruu4E3maAFJarhQeGASVX498n-P9tCc'
+tokenGroq = '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'
+tJarvisTg='8140673237:AAHXruu4E3maAFJarhQeGASVX498n-P9tCc'
+tJarvisDs=''
+tSupportTg='7913022394:AAGtm-G-8y8rIf_mQcc4CsWBGBSHA0dJOAI'
+
 whiteList = [776247660]
 
 SAFE_COMMANDS = ["shutdown", "dir", "echo", "tasklist", "taskkill", "start"]

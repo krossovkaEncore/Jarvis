@@ -1,46 +1,54 @@
-import telebot
-from telebot import types
-import config
-from groq import Groq
+import subprocess
+import time
 import os
-import re
+from datetime import datetime
+LOG_DIR = "bin"
+os.makedirs(LOG_DIR, exist_ok=True)
+bots = {
+    "botJarvisTg.py": "JarvisTg.txt",
+    "botJarvisDs.py": "JarvisDs.txt",
+    "botSupportTg.py": "SupportTg.txt"
+}
+processes = {}
+def start_bot(bot_file, log_file):
+    """Запуск бота и запись лога"""
+    log_path = os.path.join(LOG_DIR, log_file)
+    log = open(log_path, "a", encoding="utf-8")
+    log.write(f"\n[{datetime.now()}] 🚀 Запуск {bot_file}\n")
+    log.flush()
 
-#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
-client = Groq(api_key="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")
-bot = telebot.TeleBot(config.token)
+    process = subprocess.Popen(
+        ["python", bot_file],
+        stdout=log,
+        stderr=subprocess.STDOUT,
+        text=True
+    )
+    return process, log
+try:
+    for bot_file, log_file in bots.items():
+        p, log = start_bot(bot_file, log_file)
+        processes[bot_file] = (p, log)
+        print(f"✅ {bot_file} запущен. Логи → {LOG_DIR}/{log_file}")
+        time.sleep(1)
 
-def run_console_commands(chat_id, text):
-    commands = re.findall(r'console:\{([^}]*)\}', text)
-    for cmd in commands:
-        cmd = cmd.strip()
-        bot.send_message(chat_id, f"Выполняю: {cmd}")
-        if any(cmd.lower().startswith(sc) for sc in config.SAFE_COMMANDS):
-            os.system(cmd)
-        else:
-            bot.send_message(chat_id, f"⚠️ Команда '{cmd}' не в списке разрешённых.")
+    print("\nВсе боты запущены. Нажми Ctrl+C для остановки.\n")
+    while True:
+        for bot_file, (process, log) in list(processes.items()):
+            if process.poll() is not None:
+                code = process.returncode
+                log.write(f"[{datetime.now()}] ⚠️ {bot_file} остановился (код {code}). Перезапуск...\n")
+                log.flush()
+                print(f"⚠️ {bot_file} упал (код {code}), перезапускаю...")
+                log.close()
+                p, new_log = start_bot(bot_file, bots[bot_file])
+                processes[bot_file] = (p, new_log)
+                time.sleep(2)
+        time.sleep(3)
 
-def userInWhiteList(chat_id):
-        if not(chat_id in config.whiteList):
-            bot.send_message(chat_id, "Нет прав, уж извени😢")
-            pass
-
-def jarvis(message):
-    resp = client.chat.completions.create(
-    messages=[{"role": "user", "content": f"правила/промт:\n{config.promt}\nСообщение владельца: {message.text}"}],model="llama-3.3-70b-versatile")
-    return resp.choices[0].message.content
-
-@bot.message_handler(commands=['start'])
-def start(message):
-    userInWhiteList(message.chat.id)
-    bot.send_message(message.chat.id, jarvis(message))
-
-@bot.message_handler(func=lambda message: True)
-def handle_text(message):
-    userInWhiteList(message.chat.id)
-    jarvisOutput = jarvis(message)
-    bot.send_message(message.chat.id, jarvisOutput)
-    run_console_commands(message.chat.id, jarvisOutput)
-
-if __name__ == "__main__":
-    print("✅ Бот запущен...")
-    bot.infinity_polling()
+except KeyboardInterrupt:
+    print("\n🛑 Завершение работы. Останавливаю все процессы...")
+    for bot_file, (process, log) in processes.items():
+        process.terminate()
+        log.write(f"[{datetime.now()}] 🛑 Завершено вручную.\n")
+        log.close()
+    print("✅ Все боты остановлены.")
