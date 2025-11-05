@@ -1,7 +1,10 @@
 import telebot
 import config
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-bot = telebot.TeleBot(config.tSupport)
+bot = telebot.TeleBot(config.tSupportTg)
 
 user_message_map = {}
 

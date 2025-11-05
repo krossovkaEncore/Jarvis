@@ -1,54 +1,76 @@
 import subprocess
 import time
 import os
+import sys
 from datetime import datetime
+
+# Цвета вывода (ANSI)
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RED = "\033[91m"
+RESET = "\033[0m"
+
 LOG_DIR = "bin"
 os.makedirs(LOG_DIR, exist_ok=True)
-bots = {
+
+# ⚙️ Список ботов
+BOTS = {
     "botJarvisTg.py": "JarvisTg.txt",
     "botJarvisDs.py": "JarvisDs.txt",
-    "botSupportTg.py": "SupportTg.txt"
+    "botSupportTg.py": "SupportTg.txt",
 }
-processes = {}
-def start_bot(bot_file, log_file):
-    """Запуск бота и запись лога"""
-    log_path = os.path.join(LOG_DIR, log_file)
-    log = open(log_path, "a", encoding="utf-8")
-    log.write(f"\n[{datetime.now()}] 🚀 Запуск {bot_file}\n")
-    log.flush()
 
-    process = subprocess.Popen(
-        ["python", bot_file],
+def start_bot(bot_name: str):
+    """Запускает бота и возвращает процесс"""
+    log_path = os.path.join(LOG_DIR, BOTS[bot_name])
+    log = open(log_path, "a", encoding="utf-8")
+    log.write(f"\n[{datetime.now()}] 🚀 Запуск {bot_name}\n")
+    log.flush()
+    p = subprocess.Popen(
+        [sys.executable, bot_name],
         stdout=log,
         stderr=subprocess.STDOUT,
         text=True
     )
-    return process, log
-try:
-    for bot_file, log_file in bots.items():
-        p, log = start_bot(bot_file, log_file)
-        processes[bot_file] = (p, log)
-        print(f"✅ {bot_file} запущен. Логи → {LOG_DIR}/{log_file}")
-        time.sleep(1)
+    return p, log, time.time()
 
-    print("\nВсе боты запущены. Нажми Ctrl+C для остановки.\n")
+print(f"{YELLOW}🔧 Запуск ботов...{RESET}\n")
+procs = {}
+
+# Запускаем всех
+for bot in BOTS:
+    p, log, t = start_bot(bot)
+    procs[bot] = {"p": p, "log": log, "start": t}
+    print(f"{GREEN}✅ {bot}{RESET} запущен. Логи → {LOG_DIR}/{BOTS[bot]}")
+print(f"\nВсе боты запущены. Нажми Ctrl+C для остановки.\n")
+
+try:
     while True:
-        for bot_file, (process, log) in list(processes.items()):
-            if process.poll() is not None:
-                code = process.returncode
-                log.write(f"[{datetime.now()}] ⚠️ {bot_file} остановился (код {code}). Перезапуск...\n")
+        time.sleep(2)
+        for bot, data in list(procs.items()):
+            p = data["p"]
+            code = p.poll()
+            if code is not None:  # бот завершился
+                runtime = time.time() - data["start"]
+                log = data["log"]
+
+                log.write(f"[{datetime.now()}] ⚠️ Завершён (код {code}, {runtime:.1f}s)\n")
                 log.flush()
-                print(f"⚠️ {bot_file} упал (код {code}), перезапускаю...")
                 log.close()
-                p, new_log = start_bot(bot_file, bots[bot_file])
-                processes[bot_file] = (p, new_log)
-                time.sleep(2)
-        time.sleep(3)
+
+                if code == 0:
+                    print(f"{YELLOW}ℹ️ {bot}{RESET} завершился нормально (код 0).")
+                    del procs[bot]
+                    continue
+
+                print(f"{RED}⚠️ {bot} упал (код {code}), перезапуск...{RESET}")
+                new_p, new_log, new_t = start_bot(bot)
+                procs[bot] = {"p": new_p, "log": new_log, "start": new_t}
 
 except KeyboardInterrupt:
-    print("\n🛑 Завершение работы. Останавливаю все процессы...")
-    for bot_file, (process, log) in processes.items():
-        process.terminate()
-        log.write(f"[{datetime.now()}] 🛑 Завершено вручную.\n")
-        log.close()
-    print("✅ Все боты остановлены.")
+    print(f"\n{YELLOW}🛑 Завершаю всех ботов...{RESET}")
+    for bot, data in procs.items():
+        data["p"].terminate()
+        data["log"].write(f"[{datetime.now()}] 🛑 Остановлено вручную.\n")
+        data["log"].close()
+    print(f"{GREEN}✅ Все процессы остановлены.{RESET}")
