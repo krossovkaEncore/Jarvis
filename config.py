@@ -1,26 +1,22 @@
 '''
-| № | Модель (ID)                             | Производитель / Особенности                                                                            | Контекстное окно                                     | Когда использовать                                                              |
-| - | --------------------------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------- | ------------------------------------------------------------------------------- |
-| 1 | `llama-3.1-405b-reasoning`              | Llama 3 3.1 версия, 405 млрд параметров (Preview) ([groq-preview.mintlify.app][1])                     | **131 072** токенов ([groq-preview.mintlify.app][1]) | Очень большие запросы, глубокое рассуждение, когда нужен максимальный контекст. |
-| 2 | `llama-3.1-70b-versatile`               | Llama 3.1, 70 млрд параметров ([groq-preview.mintlify.app][1])                                         | 131 072 токенов ([groq-preview.mintlify.app][1])     | Баланс между мощностью и ресурсами; широкий спектр задач.                       |
-| 3 | `llama-3.1-8b-instant`                  | Llama 3.1, 8 млрд параметров — лёгкий вариант ([groq-preview.mintlify.app][1])                         | 131 072 токенов ([groq-preview.mintlify.app][1])     | Быстрые интерактивные сценарии, меньше затрат.                                  |
-| 4 | `llama3-groq-70b-8192-tool-use-preview` | Специализированно для «tool use» (вызовы функций, API) от Groq + Meta ([Groq][2])                      | 8 192 токенов ([groq-preview.mintlify.app][1])       | Когда нужна работа с внешними функциями/API — лучший вариант.                   |
-| 5 | `llama3-groq-8b-8192-tool-use-preview`  | Лёгкий вариант для tool use ([Groq][2])                                                                | 8 192 токенов ([groq-preview.mintlify.app][1])       | Быстрая работа с функциями / инструментами, меньше ресурсов.                    |
-| 6 | `mixtral-8x7b-32768`                    | Mixtral 8x7B от Mistral — 8×7B конфигурация, 32 768 токенов контекста ([groq-preview.mintlify.app][1]) | 32 768 токенов                                       | Хорошо для длинных документов, больших контекстов, но не супер-тяжёлый.         |
-| 7 | `gemma-7b-it`                           | Gemma 7B от Google — компактная мощная модель ([groq-preview.mintlify.app][1])                         | 8 192 токенов                                        | Когда нужен хороший «легкий» вариант с меньшими затратами.                      |
-| 8 | `whisper-large-v3`                      | Whisper Large v3 от OpenAI, аудио-транскрипции/переводы ([console.groq.com][3])                        | (аудио-модель)                                       | Транскрипция/перевод аудио → текст.                                             |
+|  №  | Model ID                          | Коротко / кто                                                |             Контекст             | Рекомендуется для                                                                           |
+| :-: | :-------------------------------- | :----------------------------------------------------------- | :------------------------------: | :------------------------------------------------------------------------------------------ |
+|  1  | `groq/llama-3.3-70b-versatile`    | LLaMA 3.3 (70B) — лучший баланс качества/контекста.          |         131 072 токенов.         | Сложные диалоги, рассуждения, большие подсказки. ([console.groq.com][1])                    |
+|  2  | `groq/llama-3.1-8b-instant`       | LLaMA 3.1 (8B) — очень быстро и дешево.                      |         131 072 токенов.         | Быстрые интерактивные ответы, голосовые интерфейсы. ([console.groq.com][1])                 |
+|  3  | `groq/openai-gpt-oss-120b`        | GPT-OSS 120B — «open-weight» крупная модель на Groq.         |         131 072 токенов.         | Максимальная мощность в задачах генерации/кода (если доступна). ([console.groq.com][1])     |
+|  4  | `qwen-2.5-32b` / `groq/qwen3-32b` | Qwen-серия (32B) — сильна в инструкциях и коде.              | ~131 072 токенов (модель-карта). | Инструкционные задачи, кодогенерация (наличие зависит от аккаунта). ([console.groq.com][2]) |
+|  5  | `mixtral-8x7b-32768`              | Mistral Mixtral 8×7B — оптимизирован для длинных контекстов. |          32 768 токенов.         | Обработка длинных документов, загрузка больших текстов. ([console.groq.com][1])             |
 
-[1]: https://groq-preview.mintlify.app/get-started/models?utm_source=chatgpt.com "Supported Models - Groq - Quickstart"
-[2]: https://groq.com/introducing-llama-3-groq-tool-use-models/?utm_source=chatgpt.com "Introducing Llama-3-Groq-Tool-Use Models - Groq is Fast AI Inference"
-[3]: https://console.groq.com/docs/api-reference?utm_source=chatgpt.com "API Reference - GroqDocs - Groq Cloud"
+[1]: https://console.groq.com/docs/models?utm_source=chatgpt.com "Supported Models - GroqDocs"
+[2]: https://console.groq.com/docs/model/qwen-2.5-32b?utm_source=chatgpt.com "Qwen-2.5-32B - GroqDocs"
 '''
 
-aiModel = "llama-3.1-70b-versatile"
+aiModel = "llama-3.1-8b-instant"
 
-tokenGroq = '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'
-tJarvisTg='8140673237:AAHXruu4E3maAFJarhQeGASVX498n-P9tCc'
+tokenGroq = ''
+tJarvisTg=''
 tJarvisDs=''
-tSupportTg='7913022394:AAGtm-G-8y8rIf_mQcc4CsWBGBSHA0dJOAI'
+tSupportTg=''
 whiteList = [776247660]
 SAFE_COMMANDS = ["shutdown", "dir", "echo", "tasklist", "taskkill", "start"]
 prompt = '''

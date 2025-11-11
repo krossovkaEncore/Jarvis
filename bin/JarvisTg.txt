@@ -1,14 +1,97 @@
 
-[2025-11-02 23:40:08.134807] 🚀 Запуск botJarvisTg.py
+[2025-11-11 12:06:57.576853] 🚀 Запуск botJarvisTg.py
 
-[2025-11-02 23:57:48.778612] 🚀 Запуск botJarvisTg.py
+[2025-11-11 12:10:47.028780] 🚀 Запуск botJarvisTg.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ > You must confirm the following:
+ | > "I have purchased a commercial license from Coqui: licensing@coqui.ai"
+ | > "Otherwise, I agree to the terms of the non-commercial CPML: https://coqui.ai/cpml" - [y/n]
+ | | > Traceback (most recent call last):
+  File "D:\pon\myRepository\Jarvis\botJarvisTg.py", line 1, in <module>
+[2025-11-11 12:14:16.846423] 🛑 Остановлено вручную.
+    from Jarvis import jarvis, proccessing
+  File "D:\pon\myRepository\Jarvis\Jarvis.py", line 11, in <module>
+    tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2", gpu=False)
 
-[2025-11-03 00:03:08.192982] 🚀 Запуск botJarvisTg.py
+[2025-11-11 12:14:28.675848] 🚀 Запуск botJarvisTg.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ > You must confirm the following:
+ | > "I have purchased a commercial license from Coqui: licensing@coqui.ai"
+ | > "Otherwise, I agree to the terms of the non-commercial CPML: https://coqui.ai/cpml" - [y/n]
+ | | > Traceback (most recent call last):
+  File "D:\pon\myRepository\Jarvis\botJarvisTg.py", line 1, in <module>
+[2025-11-11 12:15:33.128679] 🛑 Остановлено вручную.
+    from Jarvis import jarvis, proccessing
+  File "D:\pon\myRepository\Jarvis\Jarvis.py", line 11, in <module>
 
-[2025-11-03 00:05:35.885777] 🚀 Запуск botJarvisTg.py
+[2025-11-11 12:15:45.044708] 🚀 Запуск botJarvisTg.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ > You must confirm the following:
+ | > "I have purchased a commercial license from Coqui: licensing@coqui.ai"
+ | > "Otherwise, I agree to the terms of the non-commercial CPML: https://coqui.ai/cpml" - [y/n]
+ | | > 
+[2025-11-11 12:16:58.507863] 🚀 Запуск botJarvisTg.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ > You must confirm the following:
+ | > "I have purchased a commercial license from Coqui: licensing@coqui.ai"
+ | > "Otherwise, I agree to the terms of the non-commercial CPML: https://coqui.ai/cpml" - [y/n]
+ | | > 
+[2025-11-11 12:26:38.621597] 🚀 Запуск botJarvisTg.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Traceback (most recent call last):
+  File "D:\pon\myRepository\Jarvis\botJarvisTg.py", line 1, in <module>
+    from Jarvis import jarvis, proccessing
+ImportError: cannot import name 'proccessing' from 'Jarvis' (D:\pon\myRepository\Jarvis\Jarvis.py)
+[2025-11-11 12:27:04.636151] ⚠️ Завершён (код 1, 26.0s)
 
-[2025-11-04 11:54:15.769270] 🚀 Запуск botJarvisTg.py
+[2025-11-11 12:27:04.636151] 🚀 Запуск botJarvisTg.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Traceback (most recent call last):
+  File "D:\pon\myRepository\Jarvis\botJarvisTg.py", line 1, in <module>
+    from Jarvis import jarvis, proccessing
+ImportError: cannot import name 'proccessing' from 'Jarvis' (D:\pon\myRepository\Jarvis\Jarvis.py)
+[2025-11-11 12:27:30.642162] ⚠️ Завершён (код 1, 26.0s)
 
-[2025-11-04 12:04:20.292845] 🚀 Запуск botJarvisTg.py
+[2025-11-11 12:27:30.642162] 🚀 Запуск botJarvisTg.py
 
-[2025-11-04 12:05:37.344676] 🚀 Запуск botJarvisTg.py
+[2025-11-11 12:29:25.450400] 🚀 Запуск botJarvisTg.py
+
+[2025-11-11 12:33:26.745756] 🚀 Запуск botJarvisTg.py
+
+[2025-11-11 12:35:38.992768] 🚀 Запуск botJarvisTg.py
+[2025-11-11 12:37:03.328651] 🛑 Остановлено вручную.
+
+[2025-11-11 12:37:03.540391] 🚀 Запуск botJarvisTg.py
+
+[2025-11-11 12:59:04.019810] 🚀 Запуск botJarvisTg.py
+2025-11-11 12:59:29,826 (__init__.py:1115 MainThread) ERROR - TeleBot: "Infinity polling exception: jarvis() takes 2 positional arguments but 3 were given"
+2025-11-11 12:59:29,827 (__init__.py:1117 MainThread) ERROR - TeleBot: "Exception traceback:
+Traceback (most recent call last):
+  File "D:\pon\myRepository\Jarvis\venv\Lib\site-packages\telebot\__init__.py", line 1110, in infinity_polling
+    self.polling(non_stop=True, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "D:\pon\myRepository\Jarvis\venv\Lib\site-packages\telebot\__init__.py", line 1198, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "D:\pon\myRepository\Jarvis\venv\Lib\site-packages\telebot\__init__.py", line 1273, in __threaded_polling
+    raise e
+  File "D:\pon\myRepository\Jarvis\venv\Lib\site-packages\telebot\__init__.py", line 1235, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "D:\pon\myRepository\Jarvis\venv\Lib\site-packages\telebot\util.py", line 154, in raise_exceptions
+    raise self.exception_info
+  File "D:\pon\myRepository\Jarvis\venv\Lib\site-packages\telebot\util.py", line 97, in run
+    task(*args, **kwargs)
+  File "D:\pon\myRepository\Jarvis\venv\Lib\site-packages\telebot\__init__.py", line 10134, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\pon\myRepository\Jarvis\botJarvisTg.py", line 24, in handle_text
+    jarvisOutput = jarvis(message.chat.id, message.text, chat_history)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: jarvis() takes 2 positional arguments but 3 were given
+"
+
+[2025-11-11 12:59:38.857899] 🚀 Запуск botJarvisTg.py

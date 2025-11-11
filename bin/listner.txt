@@ -1,0 +1,272 @@
+
+[2025-11-11 12:06:57.580160] рџљЂ Р—Р°РїСѓСЃРє listener.py
+
+[2025-11-11 12:10:47.032063] рџљЂ Р—Р°РїСѓСЃРє listener.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ > You must confirm the following:
+ | > "I have purchased a commercial license from Coqui: licensing@coqui.ai"
+ | > "Otherwise, I agree to the terms of the non-commercial CPML: https://coqui.ai/cpml" - [y/n]
+ | | > [2025-11-11 12:14:16.846423] рџ›‘ РћСЃС‚Р°РЅРѕРІР»РµРЅРѕ РІСЂСѓС‡РЅСѓСЋ.
+
+[2025-11-11 12:14:28.679487] рџљЂ Р—Р°РїСѓСЃРє listener.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ > You must confirm the following:
+ | > "I have purchased a commercial license from Coqui: licensing@coqui.ai"
+ | > "Otherwise, I agree to the terms of the non-commercial CPML: https://coqui.ai/cpml" - [y/n]
+ | | > [2025-11-11 12:15:33.128679] рџ›‘ РћСЃС‚Р°РЅРѕРІР»РµРЅРѕ РІСЂСѓС‡РЅСѓСЋ.
+
+[2025-11-11 12:15:45.048780] рџљЂ Р—Р°РїСѓСЃРє listener.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ > You must confirm the following:
+ | > "I have purchased a commercial license from Coqui: licensing@coqui.ai"
+ | > "Otherwise, I agree to the terms of the non-commercial CPML: https://coqui.ai/cpml" - [y/n]
+ | | > 
+[2025-11-11 12:16:58.511033] рџљЂ Р—Р°РїСѓСЃРє listener.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.11.9)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+ > You must confirm the following:
+ | > "I have purchased a commercial license from Coqui: licensing@coqui.ai"
+ | > "Otherwise, I agree to the terms of the non-commercial CPML: https://coqui.ai/cpml" - [y/n]
+ | | > 
+[2025-11-11 12:26:38.624646] рџљЂ Р—Р°РїСѓСЃРє listener.py
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:01.750
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'БЛЯАТЬ' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:02.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Чё ты падаешь, родной?' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:03.500
+INFO:faster_whisper:VAD filter removed 00:01.120 of audio
+INFO:JarvisVoice:Распознано: 'А, я не то смотрю, блять.' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'О!' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:04.750
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Кантым пронимом, что ли?  Похоже, процессинка...' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+
+[2025-11-11 12:29:25.454538] рџљЂ Р—Р°РїСѓСЃРє listener.py
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Жарвис, привет.' (уверенность: 1.00)
+INFO:JarvisVoice:АКТИВАЦИЯ: жарвис, привет.
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:TTS.utils.synthesizer:Text split into sentences.
+INFO:TTS.utils.synthesizer:Input: ['Привет, Илья!', 'Начнем наш день вместе.', 'Что можешь мне сегодня заказать?']
+D:\pon\myRepository\Jarvis\venv\Lib\site-packages\torchaudio\_backend\utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.synthesizer:Processing time: 10.659
+INFO:TTS.utils.synthesizer:Real-time factor: 1.706
+ERROR:JarvisVoice:Ошибка в jarvis(): music_drmp3: corrupt mp3 file (bad stream).
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:05.750
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Бля, я уже раньше времени начал ругаться про себя, но у меня он выдал.' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Что ты мне...' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:04.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Бляй, это просто пиздец!' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:01.750
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Просто пиздец' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.750
+INFO:faster_whisper:VAD filter removed 00:00.750 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Кхм!' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+
+[2025-11-11 12:33:26.748878] рџљЂ Р—Р°РїСѓСЃРє listener.py
+
+[2025-11-11 12:35:38.996214] рџљЂ Р—Р°РїСѓСЃРє listener.py
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Джарис, привет!' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.750
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'жару из привет.' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:01.000
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Джарвис привет!' (уверенность: 1.00)
+INFO:JarvisVoice:АКТИВАЦИЯ: джарвис привет!
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:TTS.utils.synthesizer:Text split into sentences.
+INFO:TTS.utils.synthesizer:Input: ['Приветствую тебя, Илья!', 'Наконец-то встав новый день.', 'Что же нужно или хочешь сегодня?', 'Сделаю все возможное, чтобы разобраться и помочь.', 'А я пока активен и готов к работе.', 'В любой момент можешь отправить мне команду или вопрос.', 'И, кстати, если нужен совет или просто хочешь поболтать, я за это тоже готов.']
+D:\pon\myRepository\Jarvis\venv\Lib\site-packages\torchaudio\_backend\utils.py:213: UserWarning: In 2.9, this function's implementation will be changed to use torchaudio.load_with_torchcodec` under the hood. Some parameters like ``normalize``, ``format``, ``buffer_size``, and ``backend`` will be ignored. We recommend that you port your code to rely directly on TorchCodec's decoder instead: https://docs.pytorch.org/torchcodec/stable/generated/torchcodec.decoders.AudioDecoder.html#torchcodec.decoders.AudioDecoder.
+  warnings.warn(
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.voices:Generated voice from reference audio
+INFO:TTS.utils.voices:Generated voice from reference audio
+[2025-11-11 12:37:03.328651] рџ›‘ РћСЃС‚Р°РЅРѕРІР»РµРЅРѕ РІСЂСѓС‡РЅСѓСЋ.
+
+[2025-11-11 12:37:03.545889] рџљЂ Р—Р°РїСѓСЃРє listener.py
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:02.250
+INFO:faster_whisper:VAD filter removed 00:00.048 of audio
+INFO:JarvisVoice:Распознано: 'А, кстати, что ты мне тут говоришь?' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+INFO:JarvisVoice:Распознано: 'Субтитры субтитров Н.Новикова' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.750
+INFO:faster_whisper:VAD filter removed 00:00.048 of audio
+INFO:JarvisVoice:Распознано: 'Ага.' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:03.500
+INFO:faster_whisper:VAD filter removed 00:00.000 of audio
+
+[2025-11-11 12:59:04.023154] рџљЂ Р—Р°РїСѓСЃРє listener.py
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:01.500
+INFO:faster_whisper:VAD filter removed 00:00.780 of audio
+
+[2025-11-11 12:59:38.861684] рџљЂ Р—Р°РїСѓСЃРє listener.py
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.500 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.500 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.500 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.500 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.500 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.500 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.750
+INFO:faster_whisper:VAD filter removed 00:00.750 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.500 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.750
+INFO:faster_whisper:VAD filter removed 00:00.750 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.750
+INFO:faster_whisper:VAD filter removed 00:00.750 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.500
+INFO:faster_whisper:VAD filter removed 00:00.500 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.750
+INFO:faster_whisper:VAD filter removed 00:00.750 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...
+INFO:faster_whisper:Processing audio with duration 00:00.250
+INFO:faster_whisper:VAD filter removed 00:00.250 of audio
+INFO:JarvisVoice:Распознано: '' (уверенность: 1.00)
+INFO:JarvisVoice:Начинаю запись...

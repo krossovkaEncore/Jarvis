@@ -16,7 +16,7 @@ os.makedirs(LOG_DIR, exist_ok=True)
 # ⚙️ Список ботов
 BOTS = {
     "botJarvisTg.py": "JarvisTg.txt",
-    "botJarvisDs.py": "JarvisDs.txt",
+    "listener.py": "listner.txt",
     "botSupportTg.py": "SupportTg.txt",
 }
 
