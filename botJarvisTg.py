@@ -21,8 +21,7 @@ def start(message):
 @bot.message_handler(func=lambda message: True)
 def handle_text(message):
     userInWhiteList(message.chat.id)
-    jarvisOutput = jarvis(message.chat.id, message.text, chat_history)
-    bot.send_message(message.chat.id, jarvisOutput)
+    bot.send_message(message.chat.id, jarvis(message.chat.id, message.text, chat_history))
 if __name__ == "__main__":
     print("✅ Бот запущен...")
     bot.infinity_polling()
